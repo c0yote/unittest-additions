@@ -1,5 +1,7 @@
 # unittest_additions
 
+[![pypi-version]][pypi]
+
 Helpful extras built to make python unittesting easier.
 
 `pip install unittest-additions`
@@ -65,3 +67,6 @@ The new asserts are:
 |-------------------------|----------------
 | `assertIsEmpty(c)`      | `len(c) == 0`
 | `assertIsNotEmpty(c)`   | `len(c) > 0`
+
+[pypi-version]: https://img.shields.io/pypi/v/unittest-additions.svg
+[pypi]: https://pypi.org/project/unittest-additions/
