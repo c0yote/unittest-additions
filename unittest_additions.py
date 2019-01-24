@@ -1,8 +1,8 @@
 import os
 
-def fix_iteration_in_mock_open(open_mock):
-  """ A test utility function to help with file open mocking.
-  """
+
+def add_line_iter_to_mock_open(open_mock):
+  """ A test utility function to add line iteration to mock_open. """
   open_mock.return_value.__iter__ = lambda self : iter(self.readline, '')
 
 
@@ -21,7 +21,7 @@ class AdditionalAssertsMixin:
             raise self.failureException(msg)
 
 
-class TemporaryFile:
+class TempFile:
     def __init__(self, filepath, content):
         if os.path.exists(filepath):
             raise AssertionError('Temporary file target already exists: ' + filepath)
