@@ -20,7 +20,7 @@ Below are some example uses for some of the features.
 
 ```python
 def test_using_temp_file(self):
-    with TempFile(TEST_FILE, TEST_DATA) as tf:
+    with TestFile(TEST_FILE, TEST_DATA) as tf:
     	# File TEST_FILE now exists with TEST_DATA inside.        
         tf.append(MORE_TEST_DATA)
         # File TEST_FILE now has TEST_DATA with MORE_TEST_DATA appended.
