@@ -2,33 +2,17 @@
 
 Helpful extras built to make python unittesting easier.
 
+`pip install unittest-additions`
+
 ## Features
 
 * Additional Asserts
 * Temporary Files
 * `mock_open` Line Iteration
 
-## Additional Asserts
-
-| Method                  | Checks that ...
-|-------------------------|----------------
-| `assertIsEmpty(c)`      | `len(c) == 0`
-| `assertIsNotEmpty(c)`   | `len(c) > 0`
-
 ## Example Uses
 
 Below are some example uses for some of the features.
-
-### Additional Asserts
-
-To use the additional asserts, add the mixin to your `TestCase` class.
-
-```python
-class MixedTestCase(TestCase, AdditionalAssertsMixin):
-    def test_a_test:
-        self.assertIsEmpty([])
-        self.assertIsNotEmpty(('hello',))
-```
 
 ### Temporary Files
 
@@ -63,3 +47,21 @@ To enable line iteration you can use `add_line_iter_to_mock_open`.
 
         # Line iteration over the mock_open read_data will now work.
 ```
+
+### Additional Asserts
+
+To use the additional asserts, add the mixin to your `TestCase` class.
+
+```python
+class MixedTestCase(TestCase, AdditionalAssertsMixin):
+    def test_a_test:
+        self.assertIsEmpty([])
+        self.assertIsNotEmpty(('hello',))
+```
+
+The new asserts are:
+
+| Method                  | Checks that ...
+|-------------------------|----------------
+| `assertIsEmpty(c)`      | `len(c) == 0`
+| `assertIsNotEmpty(c)`   | `len(c) > 0`
