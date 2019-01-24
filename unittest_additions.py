@@ -21,7 +21,7 @@ class AdditionalAssertsMixin:
             raise self.failureException(msg)
 
 
-class TempFile:
+class TestFile:
     def __init__(self, filepath, content):
         if os.path.exists(filepath):
             raise AssertionError('Temporary file target already exists: ' + filepath)

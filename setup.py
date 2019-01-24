@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='unittest_additions',
-    version='0.1.0',
+    version='0.1.1',
     description='Additional features to extend python unittest and mock.',
     long_description=long_description,
     long_description_content_type='text/markdown',
