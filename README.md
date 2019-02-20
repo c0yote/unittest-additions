@@ -21,11 +21,23 @@ Below are some example uses for some of the features.
 ```python
 def test_using_temp_file(self):
     with TestFile(TEST_FILE, TEST_DATA) as tf:
-    	# File TEST_FILE now exists with TEST_DATA inside.        
+    	# File TEST_FILE now exists with TEST_DATA inside.
         tf.append(MORE_TEST_DATA)
         # File TEST_FILE now has TEST_DATA with MORE_TEST_DATA appended.
-    
+
     # File TEST_FILE no longer exists.
+```
+
+### RunTimer
+
+A RunTimer is provied to help compare run times of code.
+
+```python
+with RunTimer() as t:
+    t0 = t.split()
+    t1 = t.split()
+
+t2 = t.overall()
 ```
 
 ### mock_open Line Iteration
