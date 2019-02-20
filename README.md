@@ -10,6 +10,7 @@ Helpful extras built to make python unittesting easier.
 
 * Additional Asserts
 * Temporary Files
+* Runtime Timer
 * `mock_open` Line Iteration
 
 ## Example Uses
