@@ -1,4 +1,5 @@
 import os
+import time
 
 
 def add_line_iter_to_mock_open(open_mock):
@@ -41,3 +42,23 @@ class TestFile:
     def append(self, content):
         with open(self.filepath, 'a') as f:
             f.write(content)
+
+
+class RunTimer:
+    def __enter__(self):
+        self.start = time.perf_counter()
+        self.cut = self.start
+        return self
+
+    def __exit__(self, *args):
+        self.end = time.perf_counter()
+
+    def split(self):
+        now = time.perf_counter()
+        split = now - self.cut
+        self.cut = now
+
+        return split
+
+    def overall(self):
+        return self.end - self.start
